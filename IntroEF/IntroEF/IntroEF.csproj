@@ -130,7 +130,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="EF\Cours.cs">
+      <DependentUpon>UMSModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\Department.cs">
+      <DependentUpon>UMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Employee.cs">
       <DependentUpon>UMSModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Student.cs">
@@ -163,8 +169,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="EF\UMSModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>UMSModel.Context.cs</LastGenOutput>
       <DependentUpon>UMSModel.edmx</DependentUpon>
+      <LastGenOutput>UMSModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="EF\UMSModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -210,6 +216,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Student\List.cshtml" />
+    <Content Include="Views\Student\Create.cshtml" />
+    <Content Include="Views\Student\Details.cshtml" />
+    <Content Include="Views\Student\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
